@@ -1,3 +1,10 @@
 function checkSpam(str) {
-  // ваш код...
+  const targets = ['1XbeT', 'xxxxx'];
+
+  for (let target of targets) {
+    if (str.toLowerCase().includes(target.toLowerCase())) {
+      return true;
+    }
+  }
+  return false;
 }
