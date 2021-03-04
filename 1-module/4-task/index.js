@@ -1,8 +1,10 @@
-function checkSpam(str) {
-  const targets = ['1XbeT', 'xxxxx'];
+const SPAM_TARGETS = ['1XbeT', 'xxxxx'];
 
-  for (let target of targets) {
-    if (str.toLowerCase().includes(target.toLowerCase())) {
+function checkSpam(str) {
+  const lowerCaseStr = str.toLowerCase();
+
+  for (const target of SPAM_TARGETS) {
+    if (lowerCaseStr.includes(target.toLowerCase())) {
       return true;
     }
   }
