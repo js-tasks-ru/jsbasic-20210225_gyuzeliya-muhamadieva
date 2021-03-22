@@ -16,7 +16,7 @@ function highlight(table) {
 
     let statusCell = rows[i].cells[statusIdx];
     if (!statusCell.hasAttribute('data-available')) {
-      rows[i].setAttribute('hidden', 'hidden');
+      rows[i].hidden = true;
     } else if (statusCell.getAttribute('data-available') === 'true') {
       rows[i].classList.add('available');
     } else {
